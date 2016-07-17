@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+    	<meta charset="UTF-8" />
+
+    	<title>GeoCreatures</title>
+
+        <style type="text/css">
+        </style>
+    </head>
+
+    <body>
+        <script src="scripts/seedrandom.min.js"></script>
+        <script src="scripts/geolocation.js"></script>
+        <script>
+            (function() {
+                Geolocation.getLocationString(print, print)
+
+                function print (s) {
+                    console.log(s)
+                }
+            })()
+        </script>
+    </body>
+
+</html>
