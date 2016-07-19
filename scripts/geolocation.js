@@ -1,6 +1,5 @@
 var Geolocation = (function () {
-    var BASE = 34
-    var DECIMALS = 4
+    var ACCURACY = 4
 
     function getLocationString(callback, fail) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -14,31 +13,18 @@ var Geolocation = (function () {
     }
 
     function posToString (lat, lon) {
-        // var latString = encode(lat)
-        // var lonString = encode(lon)
-        // return (latString + 'z' + lonString).replace('-', 'y')
-        //
-        // function encode (n) {
-        //     var factor = Math.pow(10, DECIMALS)
-        //     var integerN = Math.floor(n*factor)
-        //     var stringN = integerN.toString(BASE)
-        //     return stringN
-        // }
-    }
+        var latInt = integerize(lat)
+        var lonInt = integerize(lon)
+        var product = Math.abs(latInt * lonInt)
+        var productString = product.toString(36)
+        var string = (productString + productString).substring(0, 8)
+        return string
 
-    function stringToPos (s) {
-        // var pos = s.replace('y', '-').split('z')
-        // var lat = decode(pos[0])
-        // var lon = decode(pos[1])
-        // console.log(lat)
-        // console.log(lon)
-        //
-        // function decode (s) {
-        //     var factor = Math.pow(10, DECIMALS)
-        //     var integerN = parseInt(s, BASE)
-        //     var decimalN = integerN / factor
-        //     return decimalN
-        // }
+        function integerize (n) {
+            var factor = Math.pow(10, ACCURACY)
+            var integerN = Math.floor(n*factor)
+            return integerN
+        }
     }
 
     return {
