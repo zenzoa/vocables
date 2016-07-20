@@ -42,8 +42,8 @@
 //     return syllable
 // }
 
-function capitalize (string) {
-    return string.charAt(0).toUpperCase() + string.slice(1)
+function capitalize (s) {
+    return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
 function randomIn (list) {
@@ -61,61 +61,36 @@ var nuclei = [
     'i',
     'o',
     'u'
-    //'ee',
-    //'oo',
-    //'ou',
-    //'ea',
-    //'ie',
-    //'ue',
-    //'ay',
-    //'ey',
-    //'oy',
-    //'ew',
-    //'aw',
-    //'ow',
-    //'oa'
 ]
 
 var onsets = [
     '',
-    'p', 't', 'k', 'f', 's',
-    'b', 'd', 'g', 'v', 'z',
+    'p', 't', 'c', 'k', 'f', 's',
+    'b', 'd', 'g', 'v', 'z', 'j',
     'r', 'l', 'm', 'n', 'h', 'w', 'y',
-    'ch', 'sh', 'th',
-    'x', 'qu',
-    'pl', 'bl', 'cl', 'gl',
-    'pr', 'br', 'cr', 'gr', 'tr', 'dr',
-    //'tw', 'dw', 'gw', 'cw', 'pw',
-    'fl', 'sl', 'vl', //'thl',
-    'fr', 'thr', //'shr',
-    //'hw', 'sw', 'thw', 'vw', 'fw',
-    'sp', 'st', 'sk',
-    'sm', 'sn',
-    'spr', 'str', 'skr', 'squ', //'spl', 'skl',
-    //'shl', 'shm', 'shn'
+    'ch', 'sh', 'th', 'x', 'qu',
+    'pl', 'bl', 'kl', 'cl', 'gl',
+    'pr', 'br', 'kr', 'cr', 'gr', 'tr', 'dr',
+    'fl', 'sl', 'vl',
+    'fr', 'thr', 'shr',
+    'sw', 'sp', 'st', 'sk', 'sc', 'sm', 'sn',
+    'spr', 'str', 'scr', 'skr', 'squ', 'spl', 'skl'
 ]
 
 var codas = [
     '',
-    'p', 't', 'k', 'f', 's',
-    'b', 'd', 'g', 've', 'z',
+    'p', 't', 'ck', 'f', 's', 'z',
+    'b', 'd', 'g', 'v', 'x',
     'r', 'l', 'm', 'n', 'ng',
-    'sh', 'ch', 'ge',
-
-    //'lp', 'lb', 'lt', 'ld', 'lch', 'lge', 'lk',
-    'rp', 'rb', 'rt', 'rd', 'rch', 'rge', 'rk', 'rg',
-    'lf', 'lve', 'lse', //'lsh', 'lth',
-    'rf', 'rve', 'rse', //'rsh', 'rth'
-    //'lm', 'ln',
+    'sh', 'ch', 'th',
+    'lp', 'lt', 'ld', 'lch', 'lg', 'lk',
+    'rp', 'rb', 'rt', 'rd', 'rch', 'rg', 'rk',
+    'lf', 'lv', 'ls',
+    'rf', 'rv', 'rs',
+    'lm', 'ln',
     'rm', 'rn', 'rl',
-    'mp', 'nt', 'nd', 'nch', 'nge', 'nk',
-    'ns', //'mf', 'nz', 'mth', 'nth', 'ngth',
-    'ft', 'sp', 'st', 'sk',
-    //'fth',
-    'pt','ct',
-    'ps', 'th', 'ts', 'x', //'pth', 'dth',
-    //'lpt', 'lfth', 'lts', 'lst', 'lkt', 'lx',
-    //'rmth', 'rpt', 'rps', 'rts', 'rst', 'rct',
-    'nx', //'mpt', 'mps', //'ndth', 'nct',
-    'xt', //'xth',
+    'mp', 'nt', 'nd', 'nch', 'nk',
+    'ns', 'ft', 'sp', 'st', 'sk',
+    'pt', 'kt', 'ct', 'ps', 'ts',
+    'lx', 'nx', 'xt'
 ]

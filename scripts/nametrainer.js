@@ -73,11 +73,28 @@ function judgeWord (word, addWeight) {
 }
 
 function flattenWord (word) {
-    var stringWord = ''
+    var arrayWord = []
+    var lastIndex = word.syllables.length - 1
+
     for (var i in word.syllables) {
         var syllable = word.syllables[i]
-        stringWord += syllable.onset + syllable.nucleus + syllable.coda
+        if (i == 0) arrayWord.push(syllable.onset)
+        arrayWord.push(syllable.nucleus)
+        var coda = syllable.coda
+        if (i == lastIndex) {
+            if (coda == 's') coda = 'ss'
+            if (coda == 'z') coda = 'zz'
+            if (coda == 'f') coda = 'ff'
+            if (coda == 'g') coda = 'ge'
+            if (coda == 'v') coda = 've'
+            if (coda == 'x') coda = 'xe'
+        }
+        arrayWord.push(coda)
     }
+
+    var stringWord = arrayWord.join('')
+    stringWord = stringWord.replace('uu', 'uo')
+
     return capitalize(stringWord)
 }
 
@@ -96,6 +113,9 @@ var syllableWeights = {
 }
 
 var numSyllableWeights = listOfWeights([0, 1, 2])
+numSyllableWeights[0] = .60
+numSyllableWeights[1] = .30
+numSyllableWeights[2] = .10
 
 var favoriteWords = []
 
@@ -107,7 +127,7 @@ function displayWord(word) {
 }
 
 function setupVoting(el) {
-    for (var i in range(50)) {
+    for (var i in range(30)) {
         var word = generateWord()
         displayWord(word)
             .appendTo($(el))
@@ -122,7 +142,7 @@ function setupVoting(el) {
         .click(function () {
             $('.word')
                 .each(function() {
-                    var weight = ($(this).hasClass('accepted') ? 0.02 : -0.01)
+                    var weight = ($(this).hasClass('accepted') ? 0.01 : 0)
                     judgeWord($(this).data('word'), weight)
                     if ($(this).hasClass('accepted')) {
                         favoriteWords.push($(this).text())
