@@ -106,8 +106,8 @@ function displayWord(word) {
         .text(flattenWord(word))
 }
 
-function setupVoting(el, n) {
-    for (var i in range(n)) {
+function setupVoting(el) {
+    for (var i in range(50)) {
         var word = generateWord()
         displayWord(word)
             .appendTo($(el))

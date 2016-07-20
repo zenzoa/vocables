@@ -91,7 +91,7 @@ var onsets = [
     //'hw', 'sw', 'thw', 'vw', 'fw',
     'sp', 'st', 'sk',
     'sm', 'sn',
-    'spl', 'skl', 'spr', 'str', 'skr', 'squ',
+    'spr', 'str', 'skr', 'squ', //'spl', 'skl', 
     //'shl', 'shm', 'shn'
 ]
 
@@ -101,20 +101,21 @@ var codas = [
     'b', 'd', 'g', 've', 'z',
     'r', 'l', 'm', 'n', 'ng',
     'sh', 'ch', 'ge',
-    'lp', 'lb', 'lt', 'ld', 'lch', 'lge', 'lk',
+
+    //'lp', 'lb', 'lt', 'ld', 'lch', 'lge', 'lk',
     'rp', 'rb', 'rt', 'rd', 'rch', 'rge', 'rk', 'rg',
     'lf', 'lve', 'ls', //'lsh', 'lth',
     'rf', 'rve', 'rs', //'rsh', 'rth'
-    'lm', 'ln',
+    //'lm', 'ln',
     'rm', 'rn', 'rl',
     'mp', 'nt', 'nd', 'nch', 'nge', 'nk',
-    'mf', 'ns', //'nz', 'mth', 'nth', 'ngth',
+    'ns', //'mf', 'nz', 'mth', 'nth', 'ngth',
     'ft', 'sp', 'st', 'sk',
     //'fth',
     'pt','ct',
     'ps', 'th', 'ts', 'x', //'pth', 'dth',
     //'lpt', 'lfth', 'lts', 'lst', 'lkt', 'lx',
     //'rmth', 'rpt', 'rps', 'rts', 'rst', 'rct',
-    'nx', 'mpt', 'mps', //'ndth', 'nct',
+    'nx', //'mpt', 'mps', //'ndth', 'nct',
     'xt', //'xth',
 ]
