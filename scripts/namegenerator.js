@@ -60,7 +60,7 @@ var nuclei = [
     'e',
     'i',
     'o',
-    'u',
+    'u'
     //'ee',
     //'oo',
     //'ou',
@@ -91,7 +91,7 @@ var onsets = [
     //'hw', 'sw', 'thw', 'vw', 'fw',
     'sp', 'st', 'sk',
     'sm', 'sn',
-    'spr', 'str', 'skr', 'squ', //'spl', 'skl', 
+    'spr', 'str', 'skr', 'squ', //'spl', 'skl',
     //'shl', 'shm', 'shn'
 ]
 
@@ -104,8 +104,8 @@ var codas = [
 
     //'lp', 'lb', 'lt', 'ld', 'lch', 'lge', 'lk',
     'rp', 'rb', 'rt', 'rd', 'rch', 'rge', 'rk', 'rg',
-    'lf', 'lve', 'ls', //'lsh', 'lth',
-    'rf', 'rve', 'rs', //'rsh', 'rth'
+    'lf', 'lve', 'lse', //'lsh', 'lth',
+    'rf', 'rve', 'rse', //'rsh', 'rth'
     //'lm', 'ln',
     'rm', 'rn', 'rl',
     'mp', 'nt', 'nd', 'nch', 'nge', 'nk',
